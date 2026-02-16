@@ -5,148 +5,156 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Language Whispers – Free Turkish Lessons</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-/* Body & Gradient Background */
-body {
-  font-family: 'Montserrat', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #FFD700, #FFB347, #FF6B6B);
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
-  text-align: center;
-  color: #000;
-}
-@keyframes gradientMove {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* Glass Container */
-.glass {
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  padding: 30px;
-  border-radius: 20px;
-  width: 80%;
-  max-width: 400px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+body{
+  font-family:'Montserrat',sans-serif;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#FFD700,#FFB347,#FF6B6B);
+  background-size:400% 400%;
+  animation:gradientMove 15s ease infinite;
+  text-align:center;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* Dark luxury glass */
+.glass{
+  background:rgba(0,0,0,0.55);
+  backdrop-filter:blur(15px);
+  -webkit-backdrop-filter:blur(15px);
+  padding:40px;
+  border-radius:20px;
+  width:90%;
+  max-width:420px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.4);
 }
 
 /* Logo */
-.logo {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 3px solid #FFD700;
-  margin: 0 auto 15px auto;
-  object-fit: cover;
-  display: block;
+.logo{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  border:3px solid #FFD700;
+  margin:0 auto 15px auto;
+  object-fit:cover;
+  display:block;
 }
 
-/* Headline */
-h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 32px;
-  margin-bottom: 10px;
-  color: #FFD700;
+/* Title */
+h1{
+  font-family:'Pacifico',cursive;
+  font-size:30px;
+  margin-bottom:12px;
+  color:#FFD700;
+  text-shadow:2px 2px 8px rgba(0,0,0,0.8);
 }
 
-/* Paragraphs */
-p {
-  font-size: 16px;
-  margin-bottom: 15px;
-  color: #000;
-  line-height: 1.5;
+/* Paragraph */
+p{
+  font-size:16px;
+  margin-bottom:15px;
+  color:#ffffff;
+  line-height:1.6;
+  font-weight:500;
 }
 
-/* Form */
-form input, form select, form button {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border-radius: 8px;
-  border: none;
-  font-size: 14px;
-}
-form input, form select {
-  background: rgba(255,215,0,0.1);
-  color: #FFD700;
-  box-shadow: 0 0 10px rgba(255,215,0,0.3);
-}
-form button {
-  background: #FFD700;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-form button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(255,215,0,0.5);
+/* Form inputs */
+form input,
+form select{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border-radius:8px;
+  border:none;
+  font-size:15px;
+  background:rgba(255,255,255,0.95);
+  color:#000;
 }
 
-/* Social Links */
-.social {
-  display: block;
-  width: 80%;
-  max-width: 400px;
-  margin: 5px auto;
-  padding: 10px 0;
-  border-radius: 10px;
-  background: #FFD700;
-  color: black;
-  font-weight: bold;
-  font-size: 16px;
-  text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.social:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(255,215,0,0.4);
+/* Button */
+form button{
+  width:100%;
+  padding:13px;
+  margin-top:10px;
+  border-radius:8px;
+  border:none;
+  background:#FFD700;
+  color:#000;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s ease;
 }
 
-/* Footer */
-footer {
-  margin-top: 15px;
-  font-size: 12px;
-  color: #000;
+form button:hover{
+  background:#ffcc00;
+  transform:scale(1.05);
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .logo { width: 100px; height: 100px; }
-  h1 { font-size: 28px; }
-  p { font-size: 14px; }
+/* Social buttons */
+.social{
+  display:block;
+  width:100%;
+  margin:6px 0;
+  padding:10px 0;
+  border-radius:8px;
+  background:#FFD700;
+  color:#000;
+  font-weight:600;
+  font-size:14px;
+  text-decoration:none;
+  transition:0.3s ease;
+}
+
+.social:hover{
+  background:#ffcc00;
+  transform:scale(1.05);
+}
+
+footer{
+  margin-top:15px;
+  font-size:12px;
+  color:#ddd;
+}
+
+/* Mobile */
+@media(max-width:600px){
+  .logo{width:100px;height:100px;}
+  h1{font-size:26px;}
+  p{font-size:14px;}
 }
 </style>
 </head>
 
 <body>
+
+<!-- INDEX SECTION -->
 <div class="glass" id="index-section">
-  <!-- Logo -->
+
   <img src="logo.png" alt="Language Whispers Logo" class="logo">
 
-  <!-- Headline & Tagline -->
   <h1>Welcome to Language Whispers</h1>
-  <p>Whispers today, speak loud tomorrow</p>
+  <p><strong>Whispers today, speak loud tomorrow.</strong></p>
 
-  <!-- Description -->
-  <p>Language Whispers is a platform that teaches Turkish as root and lets you join our community to learn Turkish.</p>
+  <p>Language Whispers is a platform that teaches Turkish and helps you join a growing learning community. Start your journey with us today.</p>
 
-  <!-- Registration Form -->
   <form id="register-form" method="POST" action="https://formsubmit.co/languagewhispers@gmail.com">
     <input type="text" name="Name" placeholder="Your Name" required>
-    <input type="email" name="Email" placeholder="Your Email" required>
+    <input type="email" name="Email" placeholder="Your Gmail" required>
     <select name="Level" required>
       <option disabled selected>Select Your Level</option>
       <option>Beginner</option>
@@ -156,47 +164,51 @@ footer {
     <button type="submit">Register Now</button>
   </form>
 
-  <!-- Social Media -->
-  <a href="https://www.youtube.com/@language_Whispers" target="_blank" class="social">📺 YouTube @language_whispers</a>
-  <a href="https://t.me/language_whispers1" target="_blank" class="social">💬 Telegram @language_whispers1</a>
-  <a href="https://www.tiktok.com/@language_whispers1" target="_blank" class="social">🎵 TikTok @language_whispers1</a>
+  <a href="https://www.youtube.com/@language_Whispers" target="_blank" class="social">YouTube @language_whispers</a>
+  <a href="https://t.me/language_whispers1" target="_blank" class="social">Telegram @language_whispers1</a>
+  <a href="https://www.tiktok.com/@language_whispers1" target="_blank" class="social">TikTok @language_whispers1</a>
 
-  <footer>Join our community and start your learning journey today!</footer>
+  <footer>Join our community and grow every day.</footer>
+
 </div>
 
-<!-- Thank You Section -->
+<!-- THANK YOU SECTION -->
 <div class="glass" id="thank-section" style="display:none;">
+
   <img src="logo.png" alt="Language Whispers Logo" class="logo">
+
   <h1>Thank You for Registering!</h1>
-  <p>Whispers today, speak loud tomorrow. Your journey to learning Turkish has just begun!</p>
+  <p>Your Turkish learning journey starts now.</p>
   <p><strong>Coming Soon: Our Mobile App!</strong></p>
-  <a href="https://www.youtube.com/@language_Whispers" target="_blank" class="social">📺 YouTube @language_whispers</a>
-  <a href="https://t.me/language_whispers1" target="_blank" class="social">💬 Telegram @language_whispers1</a>
-  <a href="https://www.tiktok.com/@language_whispers1" target="_blank" class="social">🎵 TikTok @language_whispers1</a>
-  <footer>Keep learning and growing every day!</footer>
+
+  <a href="https://www.youtube.com/@language_Whispers" target="_blank" class="social">YouTube</a>
+  <a href="https://t.me/language_whispers1" target="_blank" class="social">Telegram</a>
+  <a href="https://www.tiktok.com/@language_whispers1" target="_blank" class="social">TikTok</a>
+
+  <footer>Keep learning. Keep growing.</footer>
+
 </div>
 
 <script>
-const form = document.getElementById('register-form');
-const indexSection = document.getElementById('index-section');
-const thankSection = document.getElementById('thank-section');
+const form=document.getElementById('register-form');
+const indexSection=document.getElementById('index-section');
+const thankSection=document.getElementById('thank-section');
 
-form.addEventListener('submit', function(e) {
-  e.preventDefault(); // prevent default form submission
-  // Send form data via FormSubmit
-  fetch(form.action, {
-    method: 'POST',
-    body: new FormData(form)
-  }).then(() => {
-    // Hide index section and show thank you section
-    indexSection.style.display = 'none';
-    thankSection.style.display = 'block';
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+
+  fetch(form.action,{
+    method:'POST',
+    body:new FormData(form)
+  }).then(()=>{
+    indexSection.style.display='none';
+    thankSection.style.display='block';
     window.scrollTo(0,0);
-  }).catch(err => {
-    alert("There was an error submitting the form. Please try again.");
-    console.error(err);
+  }).catch(()=>{
+    alert("Submission failed. Please check your internet connection.");
   });
 });
 </script>
+
 </body>
 </html>
