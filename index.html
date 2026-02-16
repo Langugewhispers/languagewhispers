@@ -21,9 +21,8 @@ body {
   background: linear-gradient(135deg, #FFD700, #FFB347, #FF6B6B);
   background-size: 400% 400%;
   animation: gradientMove 15s ease infinite;
-  color: #000;
-  overflow-x: hidden;
   text-align: center;
+  color: #000;
 }
 @keyframes gradientMove {
   0% {background-position: 0% 50%;}
@@ -38,15 +37,15 @@ body {
   -webkit-backdrop-filter: blur(15px);
   padding: 30px;
   border-radius: 20px;
-  width: 90%;
+  width: 80%;
   max-width: 400px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 /* Logo */
 .logo {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   border: 3px solid #FFD700;
   margin: 0 auto 15px auto;
@@ -57,57 +56,43 @@ body {
 /* Headline */
 h1 {
   font-family: 'Pacifico', cursive;
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 10px;
-  color: #000;
+  color: #FFD700;
 }
 
-/* Tagline */
-.tagline {
-  font-size: 18px;
-  font-style: italic;
-  color: #333;
+/* Paragraphs */
+p {
+  font-size: 16px;
   margin-bottom: 15px;
-}
-
-/* Description */
-.description {
-  font-size: 14px;
   color: #000;
   line-height: 1.5;
-  margin-bottom: 20px;
 }
 
-/* Form Inputs & Button */
+/* Form */
+form input, form select, form button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
 form input, form select {
-  width: 100%;
-  padding: 14px;
-  margin: 10px 0;
-  border-radius: 10px;
-  border: none;
-  font-size: 15px;
-  font-weight: 600;
-  background: rgba(255,215,0,0.25);
-  color: #000;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background: rgba(255,215,0,0.1);
+  color: #FFD700;
+  box-shadow: 0 0 10px rgba(255,215,0,0.3);
 }
-
 form button {
-  width: 100%;
-  padding: 15px;
-  margin-top: 10px;
-  border-radius: 10px;
-  border: none;
   background: #FFD700;
-  color: #000;
+  color: black;
   font-weight: bold;
-  font-size: 16px;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 form button:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 12px rgba(255,215,0,0.5);
 }
 
 /* Social Links */
@@ -127,48 +112,39 @@ form button:hover {
 }
 .social:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(255,215,0,0.4);
 }
 
-/* Footer & App Coming */
+/* Footer */
 footer {
   margin-top: 15px;
-  font-size: 13px;
+  font-size: 12px;
   color: #000;
-}
-.app-coming {
-  margin-top: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #FF0000;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
   .logo { width: 100px; height: 100px; }
-  h1 { font-size: 24px; }
-  .tagline { font-size: 16px; }
-  .description { font-size: 13px; }
-  form input, form select, form button { font-size: 14px; }
+  h1 { font-size: 28px; }
+  p { font-size: 14px; }
 }
 </style>
 </head>
+
 <body>
-<div class="glass">
+<div class="glass" id="index-section">
   <!-- Logo -->
   <img src="logo.png" alt="Language Whispers Logo" class="logo">
 
   <!-- Headline & Tagline -->
   <h1>Welcome to Language Whispers</h1>
-  <p class="tagline">Whispers today, speak loud tomorrow</p>
+  <p>Whispers today, speak loud tomorrow</p>
 
   <!-- Description -->
-  <p class="description">
-    Language Whispers is a platform that teaches Turkish as the root language and gives you the chance to join a community learning experience. Gain skills, confidence, and explore more languages.
-  </p>
+  <p>Language Whispers is a platform that teaches Turkish as root and lets you join our community to learn Turkish.</p>
 
   <!-- Registration Form -->
-  <form action="https://formsubmit.co/languagewhispers@gmail.com" method="POST">
+  <form id="register-form" method="POST" action="https://formsubmit.co/languagewhispers@gmail.com">
     <input type="text" name="Name" placeholder="Your Name" required>
     <input type="email" name="Email" placeholder="Your Email" required>
     <select name="Level" required>
@@ -177,8 +153,6 @@ footer {
       <option>I know basic words</option>
       <option>Intermediate</option>
     </select>
-    <!-- Redirect to thank-you page -->
-    <input type="hidden" name="_next" value="https://language-whispers.vercel.app/thank-you.html">
     <button type="submit">Register Now</button>
   </form>
 
@@ -187,9 +161,42 @@ footer {
   <a href="https://t.me/language_whispers1" target="_blank" class="social">💬 Telegram @language_whispers1</a>
   <a href="https://www.tiktok.com/@language_whispers1" target="_blank" class="social">🎵 TikTok @language_whispers1</a>
 
-  <!-- Footer & App -->
   <footer>Join our community and start your learning journey today!</footer>
-  <p class="app-coming">📱 App coming soon!</p>
 </div>
+
+<!-- Thank You Section -->
+<div class="glass" id="thank-section" style="display:none;">
+  <img src="logo.png" alt="Language Whispers Logo" class="logo">
+  <h1>Thank You for Registering!</h1>
+  <p>Whispers today, speak loud tomorrow. Your journey to learning Turkish has just begun!</p>
+  <p><strong>Coming Soon: Our Mobile App!</strong></p>
+  <a href="https://www.youtube.com/@language_Whispers" target="_blank" class="social">📺 YouTube @language_whispers</a>
+  <a href="https://t.me/language_whispers1" target="_blank" class="social">💬 Telegram @language_whispers1</a>
+  <a href="https://www.tiktok.com/@language_whispers1" target="_blank" class="social">🎵 TikTok @language_whispers1</a>
+  <footer>Keep learning and growing every day!</footer>
+</div>
+
+<script>
+const form = document.getElementById('register-form');
+const indexSection = document.getElementById('index-section');
+const thankSection = document.getElementById('thank-section');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // prevent default form submission
+  // Send form data via FormSubmit
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form)
+  }).then(() => {
+    // Hide index section and show thank you section
+    indexSection.style.display = 'none';
+    thankSection.style.display = 'block';
+    window.scrollTo(0,0);
+  }).catch(err => {
+    alert("There was an error submitting the form. Please try again.");
+    console.error(err);
+  });
+});
+</script>
 </body>
 </html>
